@@ -91,7 +91,7 @@ textarea.question:valid + label > span {
 
 input.question:valid + label,
 textarea.question:valid + label {
-  border-color: green;
+  border-color: lightblue;
 }
 
 input.question:invalid,
@@ -121,14 +121,16 @@ input[type="submit"] {
   margin: 10px 0 0 0;
   padding: 10px;
   cursor: pointer;
+  background: #7aceff;
+  border-radius: 5px;
 }
 
 input[type="submit"]:hover {
-  background: #EEE;
+  background: #44baff;
 }
 
 input[type="submit"]:active {
-  background: #999;
+  background: #3694cc;
 }
 
 input.question:valid ~ input[type="submit"], textarea.question:valid ~ input[type="submit"] {

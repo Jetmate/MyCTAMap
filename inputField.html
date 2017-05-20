@@ -1,31 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 	    <meta charset="utf-8">
 	    <title>CTA Transit Tracker Input</title>
 	    <link rel="stylesheet" href="stylesheet.css">
+	    <script type="text/javascript" src="inputLogic.js" ></script>
     </head>
 	<body>
 		<h1>CTA Train Tracker</h1>
-		<form>
-		  <input type="text" name="name" class="question" id="nme" required autocomplete="off" />
-		  <label for="nme"><span>Where are you?</span></label>
-		  <p>
-		  	
-		  </p>
-		  <p>
-		  	
-		  </p>
-		  <p>
-		  	
-		  </p>
-		  <input type="text" name="message" class="question" id="msg" required autocomplete="off" />
+		<form id="form1">
+		  <input type="text" name="currLocation" class="question" id="loca" required autocomplete="off"/>
+		  <label for="loca"><span>Where are you?</span></label>
+		  <p></p>
+		  <input type="text" name="destination" class="question" id="dest" required autocomplete="off" />
 		  <!-- 
 		  <textarea name="message" rows="2" class="question" id="msg" required autocomplete="off"></textarea>
 		  !-->
-		  <label for="msg"><span>What is your destination?</span></label>
-		  <input type="submit" value="Submit!" />
+		  <label for="dest"><span>What is your destination?</span></label>
+		  <input type="submit" value="Find Route"/>
 		</form>
     </body>
 </html>

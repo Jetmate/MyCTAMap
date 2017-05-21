@@ -1,21 +1,37 @@
-                                                                                                                                                                                                                                                            var currentLocation;
-var destination;
-var location;
-console.log("asdfasdf");
 
-destination = getParameterByName('destination');
-currentLocation = getParameterByName('currLocation');
-console.log(destination);
-console.log(currentLocation);
+let currentLocation;
+let destination;
 
-if(destination!=null&&currentLocation!=null){   
-	console.log("asdf")
-	window.location.replace("MapDraw/index.html?loca="+currentLocation+"&dest="+destination);
+let line = getParameterByName('destination');
+let currentLocation = getParameterByName('currLocation');
+let bus = getParameterByName('transitType');
+/*if(line == "82")
+{
+  destination = "41.997346,-87.717074";
+  start = "41.837141,-87.711837";
 }
-
-window.onload=function() {
-  document.getElementById("form1").onsubmit=function() {
+/*if(){
+  destLat = destination.substring(0,)
+  destLng = destination.substring(destination.indexOf(,))
+  if(){
+    currLat = 
+    currLng = 
   }
+  else
+}
+else
+if(!resultDest&&!resultLoca)
+{
+  console.log("hey we have a place");
+}
+else if((resultDest&&!resultLoca)||(!resultDest&&resultLoca))
+{
+  console.log("hey we have weird shit");
+}
+*/
+if(line!=null&&currentLocation!=null){
+	console.log("asdf")
+	window.location.replace("MapDraw/index.html?currLocation="+currentLocation+"&destination="+line+"&transitType="+bus);
 }
 
 function getParameterByName(name, url) {

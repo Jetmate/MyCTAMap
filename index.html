@@ -5,6 +5,10 @@
 	    <title>CTA Transit Tracker Input</title>
 	    <link rel="stylesheet" href="stylesheet.css">
 	    <script type="text/javascript" src="inputLogic.js" ></script>
+	    <!--<script async defer
+	    src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDf5TPhYmMzQ7sv7QDQbpUEDMQL3GbmLzE&callback=initMap">
+	    </script>
+	    !-->
     </head>
 	<body>
 		<h1>CTA Train Tracker</h1>
@@ -12,17 +16,17 @@
 		  <input type="text" name="currLocation" class="question" id="loca" required autocomplete="off"/>
 		  <label for="loca"><span>Where are you?</span></label>
 		  <p></p>
-		  <input type="text" name="destination" class="question" id="dest" required autocomplete="off" />
+		  <input type="text" name="destination" class="question" id="line" required autocomplete="off" />
 		  <!-- 
 		  <textarea name="message" rows="2" class="question" id="msg" required autocomplete="off"></textarea>
 		  !-->
-		  <label for="dest"><span>What is your destination?</span></label>
+		  <label for="dest"><span>Which Line?</span></label>
 		  <div class="transit">
-		  	<input id="a" type="checkbox" name="transitType" value="Train">
+		  	<input id="a" type="radio" name="transitType" value="Train">
 		  	<label for="a"><img src="train_icon.png"style="width:32px;height:32px;"></label>
 		  </div>
 		  <div class="transit">
-		  	<input id="b" type="checkbox" name="transitType" value="Bus">
+		  	<input id="b" type="radio" name="transitType" value="Bus">
 		  	<label for="b"><img src="bus_icon.png"style="width:32px;height:32px;"></label>
 	       </div>
 		  <input type="submit" value="Find Route"/>

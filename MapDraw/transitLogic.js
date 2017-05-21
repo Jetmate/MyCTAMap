@@ -47,7 +47,6 @@ $(function(){
     position: currLoc,
     map: map
   });
-
   initDestBounds.extend(destLoc);
   initDestBounds.extend(initLoc);
   map.fitBounds(initDestBounds);
@@ -56,7 +55,37 @@ $(function(){
   directionsDisplay = new google.maps.DirectionsRenderer();
   directionsDisplay.setMap(map);
   calculateAndDisplayRoute(directionsService,directionsDisplay,initLoc,destLoc);
+  var dataSet = [];
+  dataSet[0]= new google.maps.LatLng(41.902369,-87.712069)
+  dataSet[1]= new google.maps.LatLng(41.917369,-87.712069)
+  dataSet[2]= new google.maps.LatLng(41.95369,-87.712569)
+  dataSet[3]= new google.maps.LatLng(41.89769,-87.712069)
+  dataSet[4]= new google.maps.LatLng(41.86769,-87.712069)
+  dataSet[4]= new google.maps.LatLng(41.85769,-87.712069)
+  dataSet[4]= new google.maps.LatLng(41.83769,-87.712069)
+  dataSet[5]= new google.maps.LatLng(41.912369,-87.712069)
+  dataSet[6]= new google.maps.LatLng(41.927369,-87.712069)
+  dataSet[7]= new google.maps.LatLng(41.93369,-87.712069)
+  dataSet[8]= new google.maps.LatLng(41.84769,-87.712069)
+  dataSet[9]= new google.maps.LatLng(41.87769,-87.712069)
+  dataSet[10]= new google.maps.LatLng(41.86769,-87.712069)
+  dataSet[11]= new google.maps.LatLng(41.97769,-87.712069)
+  dataSet[12]= new google.maps.LatLng(41.94769,-87.712069)
+  dataSet[13]= new google.maps.LatLng(41.96769,-87.713069)
+  dataSet[14]= new google.maps.LatLng(41.96769,-87.713069)
+  dataSet[13]= new google.maps.LatLng(41.98769,-87.713069)
+  
+  var image = 'Bus%20ICON.png';
+  for(var i = 0; i<dataSet.length;i++)
+  {
+    marker = new google.maps.Marker({
+    position: dataSet[i],
+    map: map,
+    icon: image
+  });
+  }
 })
+
 
 function calculateAndDisplayRoute(directionsService, directionsDisplay, origin,dest) {
     directionsService.route({

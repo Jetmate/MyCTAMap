@@ -1,4 +1,11 @@
-$(function(){
+let socket = io()
+        socket.emit("start")
+        socket.on("lat", function(lat) {
+          console.log(lat)
+        })
+        socket.on("lon", function(lon) {
+          console.log(lon)
+        })
 /*You code */
   //Parse URL for Location and Destination Variables
   //if(getParameterByName("line")=="82")
@@ -99,8 +106,6 @@ $(function(){
 
 
 
-
-})
 
 
 function calculateAndDisplayRoute(directionsService, directionsDisplay, origin,dest) {

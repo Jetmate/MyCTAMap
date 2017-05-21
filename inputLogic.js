@@ -1,5 +1,3 @@
-
-let currentLocation;
 let destination;
 
 let line = getParameterByName('destination');
@@ -30,7 +28,6 @@ else if((resultDest&&!resultLoca)||(!resultDest&&resultLoca))
 }
 */
 if(line!=null&&currentLocation!=null){
-	console.log("asdf")
 	window.location.replace("MapDraw/index.html?currLocation="+currentLocation+"&destination="+line+"&transitType="+bus);
 }
 
